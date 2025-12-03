@@ -1,12 +1,15 @@
-function highlight() {
-    //Write your code here
+let link=document.getElementById("link");
+        
+        link.addEventListener("mouseover",highlight);
+        link.addEventListener("mouseout",return_normal);
 
-
-}
-
-
-function return_normal() {
-    //Write your code here
-
-    
-}
+        function highlight(){
+            document.querySelectorAll("strong").forEach((a)=>{
+                a.style.color="green";
+            });
+        }
+        function return_normal(){
+            document.querySelectorAll("strong").forEach((a)=>{
+                a.style.color="black";
+            });
+        }
